@@ -1,4 +1,4 @@
-Mesa1, 5 lugares, livre
+Mesa1, 5 lugares, ocupado
 Mesa2, 6 lugares, ocupado
 Mesa3, 3 lugares, ocupado
 Mesa4, 5 lugares, ocupado

@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Lerficheiros {
 
-    // Método para ler o ficheiro e armazenar as mesas em memória
+    //Metodo para ler ficheiro e guardar em memoria
     public static int lerFicheiroMesas(String filePath, mesas.Mesa[] mesas) {
         final int MAX_MESAS = 100; // Defina o número máximo de mesas
         int contadorMesas = 0; // Variável para contar o número de mesas carregadas
