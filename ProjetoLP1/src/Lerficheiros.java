@@ -40,4 +40,42 @@ public class Lerficheiros {
 
         return contadorMesas;  // Retorna o número de mesas carregadas
     }
+
+
+    public static int LerFicheiroMenu() {
+        String caminhoFicheiro = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMenus.txt";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(caminhoFicheiro))) {
+            String linha;
+
+            while ((linha = br.readLine()) != null) {
+                String[] partes = linha.split(";");
+
+                // Atribuindo valores a variáveis
+                String nome = partes[0];
+                String categoria = partes[1];
+                double precoCusto = Double.parseDouble(partes[2].replace(",", "."));
+                double precoVenda = Double.parseDouble(partes[3].replace(",", "."));
+                int tempoPreparacao = Integer.parseInt(partes[4]);
+                int dificuldade = Integer.parseInt(partes[5]);
+                boolean disponivel = Boolean.parseBoolean(partes[6]);
+
+                // Exemplo de saída
+                System.out.println("Nome: " + nome);
+                System.out.println("Categoria: " + categoria);
+                System.out.println("Preço de Custo: " + precoCusto);
+                System.out.println("Preço de Venda: " + precoVenda);
+                System.out.println("Tempo de Preparação: " + tempoPreparacao + "unidades de tempo");
+                System.out.println("Dificuldade: " + dificuldade);
+                System.out.println("Disponível: " + disponivel);
+                System.out.println("-------------------------");
+            }
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o ficheiro: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.err.println("Erro ao converter número: " + e.getMessage());
+        }
+        return 0;
+    }
 }
+

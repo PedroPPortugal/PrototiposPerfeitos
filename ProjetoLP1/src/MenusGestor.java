@@ -28,7 +28,7 @@ public class  MenusGestor {
                     GestaoMesas.MenuMesas();
                     break;
                 case 2:
-                    System.out.println("Você escolheu a Opção 2.");
+                   GestaoMenu.GestaoMenu();
                     break;
                 case 3:
                     GestaoMesas.exibirMesas();
