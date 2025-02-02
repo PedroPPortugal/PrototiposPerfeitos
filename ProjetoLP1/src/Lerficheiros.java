@@ -4,10 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import static gestao_mesas.GestaoMesas.mesas;
+
 public class Lerficheiros {
 
     //Metodo para ler ficheiro e guardar em memoria
-    public static int lerFicheiroMesas(String filePath, mesas.Mesa[] mesas) {
+    public static int lerFicheiroMesas(String filePath, gestao_mesa.Mesa[] mesas) {
         final int MAX_MESAS = 100; // Defina o número máximo de mesas
         int contadorMesas = 0; // Variável para contar o número de mesas carregadas
 
@@ -23,7 +25,7 @@ public class Lerficheiros {
 
                     // Adiciona o objeto Mesa ao array (se houver espaço)
                     if (contadorMesas < MAX_MESAS) {
-                        mesas[contadorMesas] = new mesas.Mesa(numero, lugares, estado);
+                        mesas[contadorMesas] = new mesas.gestao_mesas.Mesa(numero, lugares, estado);
                         contadorMesas++;
                     } else {
                         System.err.println("Erro: Número máximo de mesas atingido.");
@@ -54,8 +56,8 @@ public class Lerficheiros {
                 // Atribuindo valores a variáveis
                 String nome = partes[0];
                 String categoria = partes[1];
-                double precoCusto = Double.parseDouble(partes[2].replace(",", "."));
-                double precoVenda = Double.parseDouble(partes[3].replace(",", "."));
+                double PC = Double.parseDouble(partes[2].replace(",", "."));
+                double PV = Double.parseDouble(partes[3].replace(",", "."));
                 int tempoPreparacao = Integer.parseInt(partes[4]);
                 int dificuldade = Integer.parseInt(partes[5]);
                 boolean disponivel = Boolean.parseBoolean(partes[6]);
@@ -63,8 +65,8 @@ public class Lerficheiros {
                 // Exemplo de saída
                 System.out.println("Nome: " + nome);
                 System.out.println("Categoria: " + categoria);
-                System.out.println("Preço de Custo: " + precoCusto);
-                System.out.println("Preço de Venda: " + precoVenda);
+                System.out.println("Preço de Custo: " + PC);
+                System.out.println("Preço de Venda: " + PV);
                 System.out.println("Tempo de Preparação: " + tempoPreparacao + "unidades de tempo");
                 System.out.println("Dificuldade: " + dificuldade);
                 System.out.println("Disponível: " + disponivel);

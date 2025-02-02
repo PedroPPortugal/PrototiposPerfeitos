@@ -8,12 +8,12 @@ public class Prato {
     private int tempoPreparacao;
     private boolean disponivel;
 
-    public Prato(String nome, String categoria, double precoCusto, double precoVenda, int tempoPreparacao) {
+    public Prato(String nome, String categoria, double PC, double PV, int estado) {
         this.nome = nome;
         this.categoria = categoria;
-        this.precoCusto = precoCusto;
-        this.precoVenda = precoVenda;
-        this.tempoPreparacao = tempoPreparacao;
+        this.precoCusto = PC;
+        this.precoVenda = PV;
+        this.tempoPreparacao = estado;
         this.disponivel = true;
     }
 
