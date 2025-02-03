@@ -1,6 +1,7 @@
 import org.w3c.dom.ls.LSOutput;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GestaoMesas {
@@ -25,13 +26,14 @@ public class GestaoMesas {
         do {
             // Exibe o menu com um design mais atrativo
             System.out.println("\n============================");
-            System.out.println("       Gestão de Mesas      ");
+            System.out.println("       Gestão de Mesas        ");
             System.out.println("============================= ");
-            System.out.println("1-  Exibir Total de Mesas     ");
-            System.out.println("2-   Editar Mesas            ");
-            System.out.println("3-   Opção 3");
-            System.out.println("0-   Sair");
-            System.out.println("============================");
+            System.out.println("1-   Exibir Total de Mesas    ");
+            System.out.println("2-   Editar Mesas             ");
+            System.out.println("3-   Adicionar Mesas          ");
+            System.out.println("4-   Remover Mesas            ");
+            System.out.println("0-   Sair                     ");
+            System.out.println("=============================");
             System.out.print("Escolha uma opção: ");
 
             // Lê a opção do usuário
@@ -48,8 +50,12 @@ public class GestaoMesas {
                   salvarAlteracoes(filePath, mesas, contadorMesas);
                     break;
                 case 3:
-                    System.out.println("Você escolheu a Opção 3.");
+                   adicionarMesa(filePath,mesas,contadorMesas);
                     break;
+
+                case 4:
+                    exibirMesas();
+                    removerMesa(filePath,mesas,contadorMesas);
                 case 0:
                     System.out.println("Saindo... Até logo!");
                     break;
@@ -161,6 +167,95 @@ public class GestaoMesas {
             System.err.println("Erro ao salvar o ficheiro: " + e.getMessage());
         }
     }
+
+    private static void adicionarMesa(String filePath, mesas.Mesa[] mesas, int contadorMesas) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n=== Adicionar Mesa ===");
+
+        // Solicita o número da mesa
+        System.out.print("Número da Mesa: ");
+        int numero = scanner.nextInt();
+
+        // Solicita a quantidade de lugares
+        System.out.print("Lugares: ");
+        int lugares = scanner.nextInt();
+        scanner.nextLine(); // Consumir a nova linha pendente após nextInt()
+
+        // Solicita o estado da mesa
+        System.out.print("Estado (livre/ocupado): ");
+        String estado = scanner.nextLine().trim().toLowerCase();
+
+        if (!estado.equals("livre") && !estado.equals("ocupado")) {
+            System.out.println("Estado inválido. Use 'livre' ou 'ocupado'.");
+            return;
+        }
+
+        // Criar a nova mesa
+        mesas[contadorMesas] = new mesas.Mesa(numero, lugares, estado);
+        contadorMesas++;
+
+        // Salvar as alterações no arquivo
+        salvarAlteracoes(filePath, mesas, contadorMesas);
+        System.out.println("✓ Mesa adicionada com sucesso!");
+    }
+    private static void removerMesa(String filePath, mesas.Mesa[] mesas, int contadorMesas) {
+        Scanner scanner = new Scanner(System.in);
+
+        if (contadorMesas == 0) {
+            System.out.println("Nenhuma mesa encontrada para remover.");
+            return;
+        }
+
+        // Exibir as mesas disponíveis
+        System.out.println("\n=== Remover Mesa ===");
+        for (int i = 0; i < contadorMesas; i++) {
+            if (mesas[i] != null) {
+                System.out.println(mesas[i].getNumero() + ". " + mesas[i]);
+            }
+        }
+
+        // Solicitar o número da mesa a ser removida
+        System.out.print("Digite o número da mesa que deseja remover: ");
+        int numeroMesa = scanner.nextInt();
+
+        // Procurar a mesa no array
+        int indexRemover = -1;
+        for (int i = 0; i < contadorMesas; i++) {
+            if (mesas[i] != null && mesas[i].getNumero() == numeroMesa) {
+                indexRemover = i;
+                break;
+            }
+        }
+
+        // Verifica se a mesa foi encontrada
+        if (indexRemover == -1) {
+            System.out.println("Mesa não encontrada!");
+            return;
+        }
+
+        // Confirmar remoção
+        System.out.print("Tem certeza que deseja remover a mesa " + numeroMesa + "? (sim/não): ");
+        scanner.nextLine(); // Limpar buffer
+        String confirmacao = scanner.nextLine().trim().toLowerCase();
+
+        if (!confirmacao.equals("sim")) {
+            System.out.println("Remoção cancelada.");
+            return;
+        }
+
+        // Remover a mesa deslocando os elementos no array
+        for (int i = indexRemover; i < contadorMesas - 1; i++) {
+            mesas[i] = mesas[i + 1];
+        }
+        mesas[contadorMesas - 1] = null;
+        contadorMesas--;
+
+        // Salvar as alterações no arquivo
+        salvarAlteracoes(filePath, mesas, contadorMesas);
+        System.out.println("✓ Mesa removida com sucesso!");
+    }
+
+
 
 }
 
