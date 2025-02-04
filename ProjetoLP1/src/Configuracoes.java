@@ -10,8 +10,11 @@ public class Configuracoes {
     private static final String CONFIG_FILE = "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS\\configuracoes.txt";
     private static final String SENHA_FILE = "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS\\Palavras-Passe\\senha.txt";
 
-    public Configuracoes(String caminhoFicheiros, char separadorFicheiros, int unidadesTempoPorDia,
-                         int unidadesConsumoPrato, double custoClienteNaoAtendido) {
+    public Configuracoes(String s, char c, int i, int i1, double v) {
+    }
+
+    public void Configuracoes(String caminhoFicheiros, char separadorFicheiros, int unidadesTempoPorDia,
+                              int unidadesConsumoPrato, double custoClienteNaoAtendido) {
         this.caminhoFicheiros = caminhoFicheiros;
         this.separadorFicheiros = separadorFicheiros;
         this.unidadesTempoPorDia = unidadesTempoPorDia;
