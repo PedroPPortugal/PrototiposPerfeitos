@@ -77,5 +77,33 @@ public class Lerficheiros {
         }
         return 0;
     }
+
+    public static int LerFicheiroReservas() {
+
+        String caminhoFicheiro = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroReservas.txt";
+        try (BufferedReader br = new BufferedReader(new FileReader(caminhoFicheiro))) {
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                String[] partes = linha.split(";");
+                if (partes.length == 3) {
+                    String nome = partes[0];
+                    int quantidadePessoas = Integer.parseInt(partes[1]);
+                    int unidadeTempo = Integer.parseInt(partes[2]);
+
+                    // Exibir os dados lidos
+                    System.out.println("Nome: " + nome +
+                            ", Quantidade de Pessoas: " + quantidadePessoas +
+                            ", Unidade de Tempo: " + unidadeTempo);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Erro ao ler o ficheiro: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Erro ao converter número: " + e.getMessage());
+        }
+        return 0;
+    }
 }
+
+
 

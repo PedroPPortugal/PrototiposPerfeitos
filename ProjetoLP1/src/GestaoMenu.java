@@ -39,7 +39,6 @@ public class GestaoMenu {
                     Lerficheiros.LerFicheiroMenu();
                     System.out.println("Digite o prato que deseja editar:");
                     String nomeEditar = scanner.nextLine();
-                    editarMenu();
                     break;
 
                 case 3:
@@ -107,65 +106,42 @@ public class GestaoMenu {
     }
 
 
-    public static void removerMenu( String nomePrato) {
-            String caminhoFicheiro = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMenus.txt";
-            StringBuilder conteudoAtualizado = new StringBuilder();
-            boolean encontrou = false;
+    public static void removerMenu(String nomePrato) {
+        String caminhoFicheiro = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMenus.txt";
+        StringBuilder conteudoAtualizado = new StringBuilder();
+        boolean encontrou = false;
 
-            try (BufferedReader br = new BufferedReader(new FileReader(caminhoFicheiro))) {
-                String linha;
+        try (BufferedReader br = new BufferedReader(new FileReader(caminhoFicheiro))) {
+            String linha;
 
-                while ((linha = br.readLine()) != null) {
-                    String[] partes = linha.split(";");
+            while ((linha = br.readLine()) != null) {
+                String[] partes = linha.split(";");
 
-                    // Atribuindo valores a variáveis
-                    String nome = partes[0];
+                // Atribuindo valores a variáveis
+                String nome = partes[0];
 
-                    // Verifica se o nome do prato é diferente do que queremos remover
-                    if (!nome.equalsIgnoreCase(nomePrato)) {
-                        conteudoAtualizado.append(linha).append(System.lineSeparator());
-                    } else {
-                        encontrou = true; // Marca que encontrou o prato
-                    }
+                // Verifica se o nome do prato é diferente do que queremos remover
+                if (!nome.equalsIgnoreCase(nomePrato)) {
+                    conteudoAtualizado.append(linha).append(System.lineSeparator());
+                } else {
+                    encontrou = true; // Marca que encontrou o prato
                 }
+            }
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o ficheiro: " + e.getMessage());
+            return;
+        }
+
+        // Atualizar o ficheiro com o conteúdo modificado
+        if (encontrou) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoFicheiro))) {
+                bw.write(conteudoAtualizado.toString());
+                System.out.println("O prato '" + nomePrato + "' foi removido com sucesso.");
             } catch (IOException e) {
-                System.err.println("Erro ao ler o ficheiro: " + e.getMessage());
-                return;
+                System.err.println("Erro ao atualizar o ficheiro: " + e.getMessage());
             }
-
-            // Atualizar o ficheiro com o conteúdo modificado
-            if (encontrou) {
-                try (BufferedWriter bw = new BufferedWriter(new FileWriter(caminhoFicheiro))) {
-                    bw.write(conteudoAtualizado.toString());
-                    System.out.println("O prato '" + nomePrato + "' foi removido com sucesso.");
-                } catch (IOException e) {
-                    System.err.println("Erro ao atualizar o ficheiro: " + e.getMessage());
-                }
-            } else {
-                System.out.println("O prato '" + nomePrato + "' não foi encontrado no ficheiro.");
-            }
-        }
-    private static void atualizarJornalRevista() {
-        Scanner scanner = new Scanner(System.in);
-        Lerficheiros.LerFicheiroMenu();
-        System.out.print("Escolha o número do jornal/revista a atualizar: ");
-        int index = scanner.nextInt() - 1;
-        scanner.nextLine();
-
-        if (index >= 0 && index < Lerficheiros.LerFicheiroMenu().size()) {
-            JornalRevista jr = jornaisRevistas.get(index);
-            System.out.print("Novo Título (atual: " + jr.titulo + "): ");
-            jr.titulo = scanner.nextLine();
-            System.out.print("Nova Editora (atual: " + jr.editora + "): ");
-            jr.editora = scanner.nextLine();
-            System.out.print("Novo ISSN (atual: " + jr.issn + "): ");
-            jr.issn = scanner.nextLine();
-            System.out.print("Nova Data de Publicação (atual: " + jr.dataPublicacao + "): ");
-            jr.dataPublicacao = scanner.nextLine();
-            System.out.print("Nova Categoria (atual: " + jr.categoria + "): ");
-            jr.categoria = scanner.nextLine();
-            System.out.println("Jornal/Revista atualizado com sucesso");
         } else {
-            System.out.println("Número inválido");
+            System.out.println("O prato '" + nomePrato + "' não foi encontrado no ficheiro.");
         }
+    }
 }

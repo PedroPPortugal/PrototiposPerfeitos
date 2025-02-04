@@ -14,7 +14,7 @@ public class  MenusGestor {
             System.out.println("=============================");
             System.out.println("1-   Gestão de Mesas         ");
             System.out.println("2-   Gestão de menus         ");
-            System.out.println("3-   Opção 3");
+            System.out.println("3-   Gestâo Reservas         ");
             System.out.println("0-   Sair");
             System.out.println("============================");
             System.out.print("Escolha uma opção: ");
@@ -31,7 +31,7 @@ public class  MenusGestor {
                    GestaoMenu.GestaoMenu();
                     break;
                 case 3:
-                    GestaoMesas.exibirMesas();
+                    GestaoReservas.GestaReservasMenu();
                     break;
                 case 0:
                     System.out.println("Saindo... Até logo!");
