@@ -1,83 +1,65 @@
 package gestao_financeira;
 
-import java.io.*;
-
 public class Financeiro {
     private double totalFaturado;
     private double totalGastos;
+    private int totalPedidosAtendidos;
+    private int totalPedidosNaoAtendidos;
 
     public Financeiro() {
         this.totalFaturado = 0.0;
         this.totalGastos = 0.0;
+        this.totalPedidosAtendidos = 0;
+        this.totalPedidosNaoAtendidos = 0;
     }
 
-    /** Adiciona um valor ao faturamento, garantindo que seja positivo */
-    public void adicionarFaturamento(double valor) {
-        if (valor <= 0) {
-            System.out.println("Erro: O valor do faturamento deve ser positivo.");
-            return;
+    /** Registrar um pedido atendido */
+    public void registrarPedidoAtendido(double valorFaturado, double custo) {
+        if (valorFaturado >= 0 && custo >= 0) {
+            this.totalPedidosAtendidos++;
+            this.totalFaturado += valorFaturado;
+            this.totalGastos += custo;
         }
-        this.totalFaturado += valor;
-        System.out.println("Faturamento de " + valor + "€ adicionado.");
     }
 
-    /** Adiciona um valor aos gastos, garantindo que seja positivo */
-    public void adicionarGasto(double valor) {
-        if (valor <= 0) {
-            System.out.println("Erro: O valor do gasto deve ser positivo.");
-            return;
-        }
-        this.totalGastos += valor;
-        System.out.println("Gasto de " + valor + "€ adicionado.");
+    /** Registrar um pedido não atendido */
+    public void registrarPedidoNaoAtendido() {
+        this.totalPedidosNaoAtendidos++;
     }
 
-    /** Retorna o total faturado */
+    /** Obter total faturado */
     public double getTotalFaturado() {
-        return totalFaturado;
+        return this.totalFaturado;
     }
 
-    /** Retorna o total de gastos */
+    /** Obter total de gastos */
     public double getTotalGastos() {
-        return totalGastos;
+        return this.totalGastos;
     }
 
-    /** Calcula e retorna o lucro */
-    public double getLucro() {
-        return totalFaturado - totalGastos;
+    /** Obter lucro total */
+    public double getLucroTotal() {
+        return this.totalFaturado - this.totalGastos;
     }
 
-    /** Exibe um resumo financeiro formatado */
-    public void exibirResumo() {
-        System.out.println("\n--- Resumo Financeiro ---");
-        System.out.println("Total Faturado: " + totalFaturado + "€");
-        System.out.println("Total Gastos: " + totalGastos + "€");
-        System.out.println("Lucro: " + getLucro() + "€");
+    /** Obter número de pedidos atendidos */
+    public int getTotalPedidosAtendidos() {
+        return this.totalPedidosAtendidos;
     }
 
-    /** Salva os dados financeiros em um arquivo */
-    public void salvarFinanceiro(String financeiro) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("financeiro.txt"))) {
-            writer.write(totalFaturado + ";" + totalGastos);
-            System.out.println("Dados financeiros salvos com sucesso.");
-        } catch (IOException e) {
-            System.out.println("Erro ao salvar os dados financeiros.");
-        }
+    /** Obter número de pedidos não atendidos */
+    public int getTotalPedidosNaoAtendidos() {
+        return this.totalPedidosNaoAtendidos;
     }
 
-    /** Carrega os dados financeiros de um arquivo */
-    public void carregarFinanceiro(String financeiro) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("financeiro.txt"))) {
-            String linha = reader.readLine();
-            if (linha != null) {
-                String[] valores = linha.split(";");
-                this.totalFaturado = Double.parseDouble(valores[0]);
-                this.totalGastos = Double.parseDouble(valores[1]);
-                System.out.println("Dados financeiros carregados com sucesso.");
-            }
-        } catch (IOException e) {
-            System.out.println("Erro ao carregar os dados financeiros.");
-        } catch (NumberFormatException e) {
-            System.out.println("Erro: Formato inválido no arquivo de dados financeiros.");
-        }
+    /** Exibir relatório financeiro */
+    public void exibirRelatorioFinanceiro() {
+        System.out.println("\n===== RELATÓRIO FINANCEIRO =====");
+        System.out.println("Total faturado: R$ " + getTotalFaturado());
+        System.out.println("Total gasto: R$ " + getTotalGastos());
+        System.out.println("Lucro total: R$ " + getLucroTotal());
+        System.out.println("Pedidos atendidos: " + getTotalPedidosAtendidos());
+        System.out.println("Pedidos não atendidos: " + getTotalPedidosNaoAtendidos());
+        System.out.println("================================\n");
     }
 }
