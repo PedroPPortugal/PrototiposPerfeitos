@@ -5,33 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e827769-c11b-4691-92f4-a5d53d64ff02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/mesas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMesas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/GestaoReservas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Lerficheiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/Lerficheiros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/MenusGestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/MenusGestor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/gestao_dia_a_dia/SimulacaoDia.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/gestao_dia_a_dia/SimulacaoDia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/GestaoMesas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/GestaoMesas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/Mesa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/Lerficheiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/Lerficheiros.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheiroMenus.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheiroReservas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheiroReservas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesasTemp.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/mesas_temp.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Funcionarios.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMesas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoReservas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Lerficheiros.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/MenusGestor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Reservas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/menus$Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/menus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/mesas$Mesa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/mesas.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +90,7 @@
       <workItem from="1737627920556" duration="4190000" />
       <workItem from="1737743376487" duration="92000" />
       <workItem from="1737743517443" duration="9615000" />
-      <workItem from="1738682328633" duration="5415000" />
+      <workItem from="1738682328633" duration="7268000" />
     </task>
     <servers />
   </component>

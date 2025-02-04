@@ -8,12 +8,15 @@ import java.io.IOException;
 
 public class Lerficheiros {
 
+    public static String filePathMenus = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMenus.txt";
+    public static String filePathMesas = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMesas.txt";
+
     //Metodo para ler ficheiro e guardar em memoria
-    public static int LerFicheiroMesas(String filePath, mesas.Mesa[] mesas) {
+    public static int LerFicheiroMesas(mesas.Mesa[] mesas) {
         final int MAX_MESAS = 100; // Defina o número máximo de mesas
         int contadorMesas = 0; // Variável para contar o número de mesas carregadas
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePathMesas))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] partes = line.split(","); // Divide a linha pelas vírgulas
@@ -45,9 +48,8 @@ public class Lerficheiros {
 
 
     public static int LerFicheiroMenu() {
-        String caminhoFicheiro = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMenus.txt";
 
-        try (BufferedReader br = new BufferedReader(new FileReader(caminhoFicheiro))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePathMenus))) {
             String linha;
 
             while ((linha = br.readLine()) != null) {
