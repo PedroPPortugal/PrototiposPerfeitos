@@ -12,11 +12,11 @@ public class GestaoMenus {
     }
 
     /** Método auxiliar para validar valores */
-    private boolean validarValores(double PC, double PV, int tempoPreparacao) {
-        return PC > 0 && PV > 0 && tempoPreparacao > 0;
+    private boolean validarValores(double precoCusto, double precoVenda, int tempoPreparacao) {
+        return precoCusto > 0 && precoVenda > 0 && tempoPreparacao > 0;
     }
 
-    public void adicionarPrato(String nome, String categoria, double PC, double PV, int tempoPreparacao) {
+    public void adicionarPrato(String nome, String categoria, double precoCusto, double precoVenda, int tempoPreparacao) {
         if (totalPratos >= pratos.length) {
             System.out.println("Erro: Limite de pratos atingido.");
             return;
@@ -27,12 +27,12 @@ public class GestaoMenus {
             return;
         }
 
-        if (!validarValores(PC, PV, tempoPreparacao)) {
+        if (!validarValores(precoCusto, precoVenda, tempoPreparacao)) {
             System.out.println("Erro: Preços e tempo de preparação devem ser positivos.");
             return;
         }
 
-        pratos[totalPratos] = new Prato(nome, categoria, PC, PV, tempoPreparacao);
+        pratos[totalPratos] = new Prato(nome, categoria, precoCusto, precoVenda, tempoPreparacao);
         totalPratos++;
         System.out.println("Prato '" + nome + "' adicionado ao menu.");
     }
@@ -49,13 +49,13 @@ public class GestaoMenus {
         }
     }
 
-    public void removerPrato(String prato) {
+    public void removerPrato(String nome) {
         for (int i = 0; i < totalPratos; i++) {
-            if (pratos[i].getNome().equalsIgnoreCase(prato)) {
-                pratos[i] = pratos[totalPratos - 1];
-                pratos[totalPratos - 1] = null;
+            if (pratos[i].getNome().equalsIgnoreCase(nome)) {
+                pratos[i] = pratos[totalPratos - 1]; // Substitui com o último prato
+                pratos[totalPratos - 1] = null; // Remove referência
                 totalPratos--;
-                System.out.println("Prato '" + prato + "' removido.");
+                System.out.println("Prato '" + nome + "' removido.");
                 return;
             }
         }
@@ -91,23 +91,22 @@ public class GestaoMenus {
     }
 
     /** Salvar o menu em um arquivo */
-    public void salvarMenu(String FicheiroMenus ) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("FicheiroMenus.txt")) {
+    public void salvarMenu(String caminhoArquivo) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo))) {
             for (int i = 0; i < totalPratos; i++) {
                 Prato p = pratos[i];
                 writer.write(p.getNome() + ";" + p.getCategoria() + ";" + p.getPrecoCusto() + ";" + p.getPrecoVenda() + ";" + p.getTempoPreparacao());
                 writer.newLine();
             }
-
             System.out.println("Menu salvo com sucesso.");
-        } catch (IOException ) {
+        } catch (IOException e) {
             System.out.println("Erro ao salvar menu.");
         }
     }
 
     /** Carregar o menu de um arquivo */
-    public void carregarMenu(String FicheiroMenus) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("FicheiroMenus.txt"))) {
+    public void carregarMenu(String menu) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("menu.txt"))) {
             String linha;
             totalPratos = 0;
             while ((linha = reader.readLine()) != null) {
