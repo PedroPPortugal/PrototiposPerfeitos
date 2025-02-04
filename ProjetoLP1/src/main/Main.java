@@ -22,11 +22,14 @@ public class Main {
     public static Simulacao simulacao = new Simulacao(240, 25, 10);
     public static Lerficheiros lerFicheiros = new Lerficheiros();
 
+
     public static int tempoMaximoEspera = 20;
 
     public static void main(String[] args) {
 
         gestaoMenus.carregarMenu("menu.txt");
+
+     int test
 
         /**Inicializa a gestão de menus*/
 

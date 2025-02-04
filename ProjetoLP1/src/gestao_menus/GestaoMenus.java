@@ -106,16 +106,37 @@ public class GestaoMenus {
 
     /** Carregar o menu de um arquivo */
     public void carregarMenu(String menu) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("menu.txt"))) {
+        File arquivo = new File("menu.txt");
+
+        // Se o arquivo não existir, criamos um vazio
+        if (!arquivo.exists()) {
+            try {
+                if (arquivo.createNewFile()) {
+                    System.out.println("Arquivo menu.txt criado com sucesso.");
+                }
+            } catch (IOException e) {
+                System.out.println("Erro ao criar o arquivo menu.txt: " + e.getMessage());
+                return; // Sai do método se não conseguir criar o arquivo
+            }
+        }
+
+        // Agora tentamos ler o arquivo
+        try (BufferedReader reader = new BufferedReader(new FileReader(arquivo))) {
             String linha;
             totalPratos = 0;
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(";");
-                adicionarPrato(dados[0], dados[1], Double.parseDouble(dados[2]), Double.parseDouble(dados[3]), Integer.parseInt(dados[4]));
+                if (dados.length == 5) { // Garante que há dados suficientes antes de processar
+                    adicionarPrato(dados[0], dados[1], Double.parseDouble(dados[2]), Double.parseDouble(dados[3]), Integer.parseInt(dados[4]));
+                } else {
+                    System.out.println("Linha inválida ignorada: " + linha);
+                }
             }
             System.out.println("Menu carregado.");
         } catch (IOException e) {
-            System.out.println("Erro ao carregar menu.");
+            System.out.println("Erro ao carregar menu: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Erro ao converter valores numéricos do menu: " + e.getMessage());
         }
     }
 }

@@ -1,5 +1,8 @@
 package gestao_dia_a_dia;
 
+import gestao_mesas.GestaoMesas;
+import gestao_mesas.mesas;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -37,7 +40,7 @@ public class SimulacaoDia {
 
                 boolean reservaFeita = false;
 
-                for (Mesa mesa : gestao_mesas.GestaoMesas.GetMesas()) {
+                for (mesas.Mesa mesa : gestao_mesas.GestaoMesas.GetMesas()) {
                     if (!mesa.isOcupada() && mesa.getCapacidade() >= numPessoas) {
                         mesa.setOcupada(true);
                         System.out.println("Reserva '" + nomeReserva + "' encaminhada para a mesa " + mesa.getNumeroMesa());
