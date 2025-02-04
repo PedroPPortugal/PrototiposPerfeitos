@@ -15,10 +15,12 @@ import gestao_mesas.mesas.Mesa;
 public class Main {
 
     public static Estatisticas estatisticas = new Estatisticas();
+    public static GestaoMesas gestaoMesas = new GestaoMesas();
     public static GestaoMenus gestaoMenus = new GestaoMenus(10);
-    public static mesas.Mesa Mesas = new mesas.Mesa(100,15,"livre/ocupado");
-    public static SimulacaoDia simulacaoDia = new SimulacaoDia(GestaoMesas);
+    public static Mesa[] listaMesas = new Mesa[10];
+    public static SimulacaoDia simulacaoDia = new SimulacaoDia(gestaoMesas);
     public static Simulacao simulacao = new Simulacao(240, 25, 10);
+    public static Lerficheiros lerFicheiros = new Lerficheiros();
 
     public static int tempoMaximoEspera = 20;
 
@@ -51,14 +53,14 @@ public class Main {
         int totalLugares = 0;
         for (int i = 1; i <= 10; i++) {
             int capacidade = (i % 2 == 0) ? 2 : 4;
-            gestao_mesas.GestaoMesas.adicionarMesa(String);
+            gestao_mesas.GestaoMesas.adicionarMesa(Lerficheiros.filePathMesas, listaMesas, 100);
             totalLugares += capacidade;
         }
 
         System.out.println("\nTotal de mesas: 10");
         System.out.println("Total de lugares: " + totalLugares);
         System.out.println("\n--- Lista de Mesas ---");
-        Lerficheiros.LerFicheiroMesas();
+        Lerficheiros.LerFicheiroMesas(listaMesas);
 
         Console console = new Console();
     }
