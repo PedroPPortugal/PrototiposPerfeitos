@@ -40,6 +40,22 @@ public class mesas {
         public String toString() {
             return "Mesa " + numero + ": " + lugares + " lugares, " + estado;
         }
+
+        public boolean isOcupada() {
+            return estado.equals("ocupada");
+        }
+
+        public int getCapacidade() {
+            return lugares * 2;
+        }
+
+        public void setOcupada(boolean b) {
+            return ;
+        }
+
+        public String getNumeroMesa() {
+            return numero + "";
+        }
     }
 }
 

@@ -261,6 +261,9 @@ public class GestaoMesas {
     public static void listarMesas(String filePath) {}
 
 
+    public static mesas.Mesa[] GetMesas() {
+        return GetMesas();
+    }
 }
 
 

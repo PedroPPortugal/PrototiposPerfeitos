@@ -5,8 +5,8 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
 
         // Instancia o objeto de configurações e carrega as configurações a partir do arquivo
-        Configuracoes configuracoes = new Configuracoes(
-                "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS",
+        Configuracao configuracoes = new Configuracao(
+                "C:\\Users\\Lenovo\\IdeaProjects\\Nova pasta (2)\\PrototiposPerfeitos\\Txts",
                 ';',
                 24,
                 2,

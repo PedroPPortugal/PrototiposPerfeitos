@@ -84,9 +84,10 @@ public class Lerficheiros {
 
     public static int LerFicheiroReservas() {
 
-        String caminhoFicheiro = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroReservas.txt";
+        String caminhoFicheiro = "C://Users//Lenovo//IdeaProjects//Nova pasta (2)//PrototiposPerfeitos//ProjetoLP1//src//FicheirosTXT//FicheiroReservas.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(caminhoFicheiro))) {
             String linha;
+            String linhateste = br.readLine();
             while ((linha = br.readLine()) != null) {
                 String[] partes = linha.split(";");
                 if (partes.length == 3) {
@@ -105,6 +106,10 @@ public class Lerficheiros {
         } catch (NumberFormatException e) {
             System.out.println("Erro ao converter número: " + e.getMessage());
         }
+        return 0;
+    }
+
+    public static int lerFicheiroMesas(String filePath, mesas.Mesa[] mesas) {
         return 0;
     }
 }

@@ -1,16 +1,16 @@
 import java.io.*;
         import java.util.Scanner;
 
-public class Configuracoes {
+public class Configuracao {
     private String caminhoFicheiros = "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS";
     private char separadorFicheiros;
     private int unidadesTempoPorDia;
     private int unidadesConsumoPrato;
     private double custoClienteNaoAtendido;
-    private static final String CONFIG_FILE = "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS\\configuracoes.txt";
-    private static final String SENHA_FILE = "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS\\Palavras-Passe\\senha.txt";
+    private static final String CONFIG_FILE = "C:\\Users\\Lenovo\\IdeaProjects\\Nova pasta (2)\\PrototiposPerfeitos\\Txts\\configuracoes.txt";
+    private static final String SENHA_FILE = "C:\\Users\\Lenovo\\IdeaProjects\\Nova pasta (2)\\PrototiposPerfeitos\\Txts\\senha.txt";
 
-    public Configuracoes(String caminhoFicheiros, char separadorFicheiros, int unidadesTempoPorDia,
+    public Configuracao(String caminhoFicheiros, char separadorFicheiros, int unidadesTempoPorDia,
                          int unidadesConsumoPrato, double custoClienteNaoAtendido) {
         this.caminhoFicheiros = caminhoFicheiros;
         this.separadorFicheiros = separadorFicheiros;

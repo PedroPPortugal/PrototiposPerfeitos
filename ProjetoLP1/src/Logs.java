@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Logs {
-    private static final String LOG_DIR = "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS\\Logs";
+    private static final String LOG_DIR = "C:\\Users\\Lenovo\\IdeaProjects\\Nova pasta (2)\\PrototiposPerfeitos\\Txts\\Logs";
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
 
     public static void registrar(String acao) {
