@@ -1,7 +1,12 @@
-import java.util.Scanner;
+package Menus;
 
-public class Menu {
-    public static void main(String[] args) {
+import configuracoes.Configuracoes;
+import main.Main;
+import java.util.Scanner;
+import Logs.Logs;
+
+public class Menus extends Main {
+    public Menus(){
         Scanner scanner = new Scanner(System.in);
 
         // Instancia o objeto de configurações e carrega as configurações a partir do arquivo

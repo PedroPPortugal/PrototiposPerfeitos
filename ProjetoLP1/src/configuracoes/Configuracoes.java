@@ -1,5 +1,8 @@
+package configuracoes;
+
 import java.io.*;
-        import java.util.Scanner;
+import java.util.Scanner;
+import Logs.Logs;
 
 public class Configuracoes {
     private String caminhoFicheiros = "C:\\Users\\Lenovo\\IdeaProjects\\Projeto\\TXTS";

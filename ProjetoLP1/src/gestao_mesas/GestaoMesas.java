@@ -1,6 +1,6 @@
 package gestao_mesas;
 
-import FicheirosTXT.Lerficheiros;
+import FicheirosTXT.LerFicheiros;
 
 import java.io.*;
 import java.util.Scanner;
@@ -16,7 +16,7 @@ public class GestaoMesas {
         final String filePath = "C://Users//gisel//OneDrive//Ambiente de Trabalho//Agora vau//PrototiposPerfeitos//ProjetoLP1//src//FicheirosTXT//FicheirosMesas.txt/";
         final int MAX_MESAS = 100; // Número máximo de mesas suportadas
         mesas.Mesa[] mesas = new mesas.Mesa[MAX_MESAS]; // Array para armazenar mesas
-        int contadorMesas = Lerficheiros.lerFicheiroMesas(filePath,mesas); // Contador de mesas carregadas
+        int contadorMesas = LerFicheiros.lerFicheiroMesas(mesas); // Contador de mesas carregadas
 
         // Scanner para entrada do usuário
         Scanner scanner = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class GestaoMesas {
             // Executa a ação correspondente
             switch (opcao) {
                 case 1:
-                    Lerficheiros.lerFicheiroMesas(filePath,mesas);
+                    LerFicheiros.lerFicheiroMesas(mesas);
                     exibirMesas();
                     break;
                 case 2:

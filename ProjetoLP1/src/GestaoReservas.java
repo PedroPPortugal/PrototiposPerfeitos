@@ -1,4 +1,4 @@
-import FicheirosTXT.Lerficheiros;
+import FicheirosTXT.LerFicheiros;
 
 import java.io.*;
 import java.util.Scanner;
@@ -33,7 +33,7 @@ public class GestaoReservas {
                     break;
 
                 case 2:
-                   Lerficheiros.LerFicheiroReservas();
+                   LerFicheiros.lerFicheiroReservas();
                     try {
                         editarReserva(caminhoFicheiro);
                     } catch (IOException e) {
@@ -42,7 +42,7 @@ public class GestaoReservas {
                     break;
 
                 case 3:
-                    Lerficheiros.LerFicheiroReservas();
+                    LerFicheiros.lerFicheiroReservas();
                     try {
                         removerReserva(caminhoFicheiro);
                     } catch (IOException e) {

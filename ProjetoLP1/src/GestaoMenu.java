@@ -1,4 +1,5 @@
-import FicheirosTXT.Lerficheiros;
+import FicheirosTXT.LerFicheiros;
+
 
 import java.io.*;
 import java.util.Scanner;
@@ -37,13 +38,13 @@ public class GestaoMenu {
                     break;
 
                 case 2:
-                    Lerficheiros.LerFicheiroMenu();
+                    LerFicheiros.lerFicheiroMenu();
                     System.out.println("Digite o prato que deseja editar:");
                     String nomeEditar = scanner.nextLine();
                     break;
 
                 case 3:
-                    Lerficheiros.LerFicheiroMenu();
+                    LerFicheiros.lerFicheiroMenu();
                     System.out.println("Digite o nome do prato que deseja remover: ");
                     String nomePrato = scanner.nextLine();
                     removerMenu(nomePrato);

@@ -3,7 +3,7 @@ import gestao_mesas.GestaoMesas;
 import java.util.Scanner;
 
 public class  MenusGestor {
-    public static void main(String[] args) {
+    public MenusGestor() {
         Scanner scanner = new Scanner(System.in);
         int opcao;
 

@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e827769-c11b-4691-92f4-a5d53d64ff02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjetoLP1/src/Configuracoes.java.orig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Configuracoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/Configuracoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/Lerficheiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/Lerficheiros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/estatisticas/Estatisticas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/estatisticas/Estatisticas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Configuracoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/configuracoes/Configuracoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/Lerficheiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/LerFicheiros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/GestaoReservas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/Logs/Logs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/Menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/MenusGestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/MenusGestor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/GestaoMesas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/GestaoMesas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/Lerficheiros.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/Lerficheiros.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoReservas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoReservas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/MenusGestor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/MenusGestor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/gestao_mesas/GestaoMesas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/gestao_mesas/GestaoMesas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/main/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +58,7 @@
     "Application.MenusGestor.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -62,20 +74,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="MenusGestor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MenusGestor" />
-      <module name="ProjetoLP1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MenusGestor" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -103,7 +101,7 @@
       <workItem from="1737743376487" duration="92000" />
       <workItem from="1737743517443" duration="9615000" />
       <workItem from="1738682328633" duration="7268000" />
-      <workItem from="1738701882702" duration="2301000" />
+      <workItem from="1738701882702" duration="6582000" />
     </task>
     <servers />
   </component>
@@ -112,5 +110,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProjetoLP1/src/main/Main.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
