@@ -1,3 +1,5 @@
+import gestao_mesas.GestaoMesas;
+
 import java.util.Scanner;
 
 public class  MenusGestor {

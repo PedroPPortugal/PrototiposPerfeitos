@@ -5,14 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e827769-c11b-4691-92f4-a5d53d64ff02" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/mesas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Lerficheiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/Lerficheiros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoMesas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/GestaoReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/GestaoReservas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/Lerficheiros.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/FicheirosTXT/Lerficheiros.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/MenusGestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/MenusGestor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Lerficheiros.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/Lerficheiros.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/MenusGestor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/MenusGestor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/gestao_dia_a_dia/SimulacaoDia.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/gestao_dia_a_dia/SimulacaoDia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/GestaoMesas.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/GestaoMesas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/gestao_mesas/Mesa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoLP1/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLP1/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheiroMenus.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheiroReservas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheiroReservas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/FicheirosMesasTemp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/FicheirosTXT/mesas_temp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Funcionarios.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoMesas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/GestaoReservas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Lerficheiros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/MenusGestor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/Reservas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/menus$Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/menus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/mesas$Mesa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP1/mesas.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,25 +56,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MenusGestor.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "GestaoReservas",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pport/Desktop/ProjetoLp1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MenusGestor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pport/Desktop/ProjetoLp1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MenusGestor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MenusGestor" />
@@ -96,6 +115,7 @@
       <workItem from="1737627920556" duration="4190000" />
       <workItem from="1737743376487" duration="92000" />
       <workItem from="1737743517443" duration="9615000" />
+      <workItem from="1738682328633" duration="5415000" />
     </task>
     <servers />
   </component>

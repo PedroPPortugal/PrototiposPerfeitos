@@ -1,5 +1,7 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+package FicheirosTXT;
+
+import gestao_mesas.mesas;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,7 +9,7 @@ import java.io.IOException;
 public class Lerficheiros {
 
     //Metodo para ler ficheiro e guardar em memoria
-    public static int lerFicheiroMesas(String filePath, mesas.Mesa[] mesas) {
+    public static int LerFicheiroMesas(String filePath, mesas.Mesa[] mesas) {
         final int MAX_MESAS = 100; // Defina o número máximo de mesas
         int contadorMesas = 0; // Variável para contar o número de mesas carregadas
 

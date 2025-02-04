@@ -10,6 +10,4 @@ Ulisses;2;6
 David Oliveira;7;10
 Liliana Castro;2;15
 Rita Barros;2;18
-
-
-Joao;4;5
+Pedro;6;5

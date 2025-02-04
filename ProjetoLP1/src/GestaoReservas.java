@@ -1,3 +1,5 @@
+import FicheirosTXT.Lerficheiros;
+
 import java.io.*;
 import java.util.Scanner;
 

@@ -1,8 +1,5 @@
 package gestao_dia_a_dia;
 
-import gestao_mesas.GestaoMesas;
-import gestao_mesas.Mesa;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
