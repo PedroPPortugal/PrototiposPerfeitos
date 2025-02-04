@@ -9,6 +9,7 @@ public class Mesa {
     public int capacidade;
     public boolean ocupada;
     public QuantidadePrato[] pratos;
+    private Mesa[] mesas;
 
 
     public Mesa(int numeroMesa, int capacidade) {
@@ -56,5 +57,12 @@ public class Mesa {
             gestaoMesas.mesas[mesaId-1].pratos[gestaoMesas.mesas[mesaId-1].pratos.length].prato = prato;
             gestaoMesas.mesas[mesaId-1].pratos[gestaoMesas.mesas[mesaId-1].pratos.length].quantidade = 1;
         }
+    }
+
+    public void adicionarMesa(int i, int capacidade) {
+    }
+
+    public void listarMesas() {
+
     }
 }
