@@ -13,7 +13,7 @@ public class GestaoMesas {
 
         // Caminho para o arquivo de mesas
         // Caminho para o arquivo de mesas
-        final String filePath = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheirosMesas.txt/";
+        final String filePath = "C://Users//gisel//OneDrive//Ambiente de Trabalho//Agora vau//PrototiposPerfeitos//ProjetoLP1//src//FicheirosTXT//FicheirosMesas.txt/";
         final int MAX_MESAS = 100; // Número máximo de mesas suportadas
         mesas.Mesa[] mesas = new mesas.Mesa[MAX_MESAS]; // Array para armazenar mesas
         int contadorMesas = Lerficheiros.lerFicheiroMesas(filePath,mesas); // Contador de mesas carregadas

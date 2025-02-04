@@ -8,8 +8,8 @@ import java.io.IOException;
 
 public class Lerficheiros {
 
-    public static String filePathMenus = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMenus.txt";
-    public static String filePathMesas = "C://Users//pport//Desktop//ProjetoLP1//ProjetoLP1//src//FicheirosTXT//FicheiroMesas.txt";
+    public static String filePathMenus = "C://Users//gisel//OneDrive//Ambiente de Trabalho//Agora vau//PrototiposPerfeitos//ProjetoLP1//src//FicheirosTXT//FicheiroMenus.txt";
+    public static String filePathMesas = "C://Users//gisel//OneDrive//Ambiente de Trabalho//Agora vau//PrototiposPerfeitos//ProjetoLP1//src//FicheirosTXT//FicheiroMesas.txt";
 
     //Metodo para ler ficheiro e guardar em memoria
     public static int LerFicheiroMesas(mesas.Mesa[] mesas) {
@@ -84,7 +84,7 @@ public class Lerficheiros {
 
     public static int LerFicheiroReservas() {
 
-        String caminhoFicheiro = "C://Users//Lenovo//IdeaProjects//Nova pasta (2)//PrototiposPerfeitos//ProjetoLP1//src//FicheirosTXT//FicheiroReservas.txt";
+        String caminhoFicheiro = "C://Users//gisel//OneDrive//Ambiente de Trabalho//Agora vau//PrototiposPerfeitos//ProjetoLP1//src//FicheirosTXT//FicheiroReservas.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(caminhoFicheiro))) {
             String linha;
             String linhateste = br.readLine();

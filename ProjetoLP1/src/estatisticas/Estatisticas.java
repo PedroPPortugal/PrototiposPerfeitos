@@ -93,21 +93,27 @@ public class Estatisticas {
     }
 
     public String getTotalClientesAtendidos() {
+        return null;
     }
 
     public String getTotalPedidosAtendidos() {
+        return null;
     }
 
     public String getTotalPedidosNaoAtendidos() {
+        return null;
     }
 
 
     public String getTotalFaturado() {
+        return null;
     }
 
     public String getTotalGastos() {
+        return null;
     }
 
     public String getLucro() {
+        return null;
     }
 }

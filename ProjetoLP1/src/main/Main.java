@@ -29,7 +29,7 @@ public class Main {
 
         gestaoMenus.carregarMenu("menu.txt");
 
-     int test
+     int test;
 
         /**Inicializa a gestão de menus*/
 
